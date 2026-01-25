@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/public/images/steam_icon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home</title>
+</head>
+
+<body> <!--style="zoom: 1.4;"-->
+
+  <!--NAV-->
+  <nav class="bg-white border-gray-200 dark:bg-gray-900" >
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+      <a href="https://v3.flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
+        <img src="https://store.fastly.steamstatic.com/public/shared/images/header/logo_steam.svg?t=962016" class="h-8"
+          alt="Flowbite Logo" />
+      </a>
+      <div class="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+        <button type="button"
+          class="flex text-sm bg-gray-800 rounded-full md:me-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
+          id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown"
+          data-dropdown-placement="bottom">
+          <span class="sr-only">Open user menu</span>
+          <img class="w-8 h-8 rounded-full" src="https://i.postimg.cc/52n8kBL8/Igris-icon.jpg" alt="user photo">
+        </button>
+        <!-- Dropdown menu -->
+        <div
+          class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow-sm dark:bg-gray-700 dark:divide-gray-600"
+          id="user-dropdown">
+          <div class="px-4 py-3">
+            <span class="block text-sm text-gray-900 dark:text-white">Noobmaster69</span>
+            <span class="block text-sm  text-gray-500 truncate dark:text-gray-400">noobmaster69o@gmail.com</span>
+          </div>
+          <ul class="py-2" aria-labelledby="user-menu-button">
+            <li>
+              <a href="#"
+                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Ajustes</a>
+            </li>
+            <li>
+              <a href="#"
+                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Cerrar
+                Sesión
+              </a>
+            </li>
+          </ul>
+        </div>
+        <button data-collapse-toggle="navbar-user" type="button"
+          class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          aria-controls="navbar-user" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M1 1h15M1 7h15M1 13h15" />
+          </svg>
+        </button>
+      </div>
+      <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-user">
+        <ul
+          class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+          <li>
+            <a href="index.html"
+              class="block py-2 px-3 text-white bg-blue-700 rounded-sm md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500"
+              aria-current="page">Inicio</a>
+          </li>
+          <li>
+            <a href="/src/pages/nosotros.html"
+              class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Nosotros</a>
+          </li>
+          <li>
+            <a href="/src/pages/categorias.html"
+              class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Categorias</a>
+          </li>
+
+          <li>
+            <a href="/src/pages/contacto.html"
+              class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Contactanos</a>
+          </li>
+          <li>
+            <a href="/src/pages/carrito.html"
+              class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Compras</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!--HERO-->
+    <section>
+        <div style="display: flex; justify-content: center; background-color: rgb(0, 0, 0);">
+            <img src="https://clan.fastly.steamstatic.com/images/1541443/dc8ab595ed25be33fb80bd40d785e05f3dfd9402.jpg" alt="Spiderman">
+        </div>
+    </section>
+
+  <!--CARRUSEL-->
+  <br>
+  <div id="default-carousel" class="relative w-full max-w-3xl h-100 mx-auto " data-carousel="static"> 
+    <!-- Carousel wrapper -->
+    <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
+      <!-- Item 1 -->
+      <div class="hidden duration-900 ease-in-out" data-carousel-item>
+        <img src="https://i.postimg.cc/nrjHZk9P/ARK.jpg"
+          class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="ARK ASCENDED">
+      </div>
+      <!-- Item 2 -->
+      <div class="hidden duration-900 ease-in-out" data-carousel-item>
+        <img src="https://i.postimg.cc/tg3kvQSy/GTA.jpg"
+          class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="GTA V">
+      </div>
+      <!-- Item 3 -->
+      <div class="hidden duration-900 ease-in-out" data-carousel-item>
+        <img src="https://i.postimg.cc/qv824c8N/RE.jpg"
+          class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="RESIDENT EVIL">
+      </div>
+    </div>
+    <!-- Slider indicators -->
+    <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
+      <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1"
+        data-carousel-slide-to="0"></button>
+      <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2"
+        data-carousel-slide-to="1"></button>
+      <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3"
+        data-carousel-slide-to="2"></button>
+    </div>
+    <!-- Slider controls -->
+    <button type="button"
+      class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+      data-carousel-prev>
+      <span
+        class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+        <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M5 1 1 5l4 4" />
+        </svg>
+        <span class="sr-only">Previous</span>
+      </span>
+    </button>
+    <button type="button"
+      class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+      data-carousel-next>
+      <span
+        class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+        <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="m1 9 4-4-4-4" />
+        </svg>
+        <span class="sr-only">Next</span>
+      </span>
+    </button>
+  </div>
+  <br>
+  <!--RECOMENDACIONES-->
+  <section class="bg-gray-900 text-white p-6 max-w-6xl mx-auto ">
+
+    <h2 class="text-2xl font-bold mb-4 text-center">Recomendaciones del día</h2>
+
+    <!--Juego-->
+    <div class="flex max-w-4xl gap-2 mx-auto justify-center items-center">
+      <!-- Carrusel de imágenes -->
+      <div id="carousel" class="relative w-full max-w-xl mx-auto " data-carousel="slide"> <!--slide = movimiento / static = quieto -->
+        <div class="relative h-64 w-full overflow-hidden rounded-lg">
+          <div class="hidden duration-500 ease-in-out" data-carousel-item>
+            <img
+              src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/275850/5f39cba0164881a53f6aee01f72180f7c619c011/header.jpg?t=1765800348"
+              class="absolute block w-full h-full object-cover" alt="Imagen 1">
+          </div>
+          <div class="hidden duration-500 ease-in-out" data-carousel-item>
+            <img
+              src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/275850/ss_d4884d4d208b3f6a3ecef898559da7a36102fc70.1920x1080.jpg?t=1765800348"
+              class="absolute block w-full h-full object-cover" alt="Imagen 2">
+          </div>
+          <div class="hidden duration-500 ease-in-out" data-carousel-item>
+            <img
+              src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/275850/ss_32256c21c6bfd9032debf56e1af47029e6d9f9b0.1920x1080.jpg?t=1765800348"
+              class="absolute block w-full h-full object-cover" alt="Imagen 3">
+          </div>
+        </div>
+        <!-- Botones chiquitos de abajo -->
+        <div class="absolute bottom-5 left-1/2 z-30 flex -translate-x-1/2 space-x-3">
+          <button type="button" class="w-3 h-3 rounded-full bg-white" aria-current="true" aria-label="Slide 1"
+            data-carousel-slide-to="0"></button>
+          <button type="button" class="w-3 h-3 rounded-full bg-white/50" aria-label="Slide 2"
+            data-carousel-slide-to="1"></button>
+          <button type="button" class="w-3 h-3 rounded-full bg-white/50" aria-label="Slide 3"
+            data-carousel-slide-to="2"></button>
+        </div>
+      </div>
+      <!-- Texto con fondo -->
+      <div class="w-1/2 h-64 flex flex-col items-center justify-center bg-gray-800 text-gray-100 px-4 rounded-lg">
+        <img src="https://i.postimg.cc/PJjBFnnR/no-mans-sky.jpg" alt="Presentacion">
+        <p class="text-sm text-center gap-2 m-1">No Man's Sky es un juego de exploración y supervivencia en un universo infinito </p>
+        <p class="font-bold text-md">$20.99 USD</p>
+        <button class="text-blue-500">COMPRAR</button>
+      </div>
+    </div>
+
+    <br>
+
+    <!--Juego-->
+    <div class="flex max-w-4xl gap-2 mx-auto justify-center items-center">
+      <!-- Carrusel de imágenes -->
+      <div id="carousel" class="relative w-full max-w-xl mx-auto " data-carousel="slide">
+        <div class="relative h-64 w-full overflow-hidden rounded-lg">
+          <div class="hidden duration-500 ease-in-out" data-carousel-item>
+            <img
+              src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1551360/header.jpg?t=1746471508"
+              class="absolute block w-full h-full object-cover" alt="Imagen 1">
+          </div>
+          <div class="hidden duration-500 ease-in-out" data-carousel-item>
+            <img
+              src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1551360/ss_cf56e25a0290556ba83229eb0ab370d10be0407c.1920x1080.jpg?t=1746471508"
+              class="absolute block w-full h-full object-cover" alt="Imagen 2">
+          </div>
+          <div class="hidden duration-500 ease-in-out" data-carousel-item>
+            <img
+              src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1551360/ss_b65236b365315ebb6da6114ce42cd74b59cab3c8.1920x1080.jpg?t=1746471508"
+              class="absolute block w-full h-full object-cover" alt="Imagen 3">
+          </div>
+        </div>
+        <!-- Botones chiquitos de abajo -->
+        <div class="absolute bottom-5 left-1/2 z-30 flex -translate-x-1/2 space-x-3">
+          <button type="button" class="w-3 h-3 rounded-full bg-white" aria-current="true" aria-label="Slide 1"
+            data-carousel-slide-to="0"></button>
+          <button type="button" class="w-3 h-3 rounded-full bg-white/50" aria-label="Slide 2"
+            data-carousel-slide-to="1"></button>
+          <button type="button" class="w-3 h-3 rounded-full bg-white/50" aria-label="Slide 3"
+            data-carousel-slide-to="2"></button>
+        </div>
+      </div>
+      <!-- Texto con fondo -->
+      <div class="w-1/2 h-64 flex flex-col items-center justify-center bg-gray-800 text-gray-100 px-4 rounded-lg">
+        <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1551360/header.jpg?t=1746471508" alt="Presentacion">
+        <p class="text-sm text-center gap-2 m-1">Explora el mundo abierto de México con una acción de conducción ilimitada en los mejores autos del mundo.</p>
+        <p class="font-bold text-md">$50.99 USD</p>
+        <button class="text-blue-500">COMPRAR</button>
+      </div>
+    </div>
+
+    <br>
+
+    <!--Juego-->
+
+    <div class="flex max-w-4xl gap-2 mx-auto justify-center items-center">
+      <!-- Carrusel de imágenes -->
+      <div id="carousel" class="relative w-full max-w-xl mx-auto " data-carousel="slide">
+        <div class="relative h-64 w-full overflow-hidden rounded-lg">
+          <div class="hidden duration-500 ease-in-out" data-carousel-item>
+            <img
+              src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2807960/c12d12ce3c7d217398d3fcad77427bfc9d57c570/header.jpg?t=1765583938"
+              class="absolute block w-full h-full object-cover" alt="Imagen 1">
+          </div>
+          <div class="hidden duration-500 ease-in-out" data-carousel-item>
+            <img
+              src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2807960/68914f2848e24b76a25e22029686394aa1ac94d4/ss_68914f2848e24b76a25e22029686394aa1ac94d4.1920x1080.jpg?t=1765583938"
+              class="absolute block w-full h-full object-cover" alt="Imagen 2">
+          </div>
+          <div class="hidden duration-500 ease-in-out" data-carousel-item>
+            <img
+              src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2807960/18b0109d89afa9c1b6afce2cabb9429da7ab9968/ss_18b0109d89afa9c1b6afce2cabb9429da7ab9968.1920x1080.jpg?t=1765583938"
+              class="absolute block w-full h-full object-cover" alt="Imagen 3">
+          </div>
+        </div>
+        <!-- Botones chiquitos de abajo -->
+        <div class="absolute bottom-5 left-1/2 z-30 flex -translate-x-1/2 space-x-3">
+          <button type="button" class="w-3 h-3 rounded-full bg-white" aria-current="true" aria-label="Slide 1"
+            data-carousel-slide-to="0"></button>
+          <button type="button" class="w-3 h-3 rounded-full bg-white/50" aria-label="Slide 2"
+            data-carousel-slide-to="1"></button>
+          <button type="button" class="w-3 h-3 rounded-full bg-white/50" aria-label="Slide 3"
+            data-carousel-slide-to="2"></button>
+        </div>
+      </div>
+      <!-- Texto con fondo -->
+      <div class="w-1/2 h-64 flex flex-col items-center justify-center bg-gray-800 text-gray-100 px-4 rounded-lg">
+        <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2807960/c12d12ce3c7d217398d3fcad77427bfc9d57c570/header.jpg?t=1765583938" alt="Presentacion">
+        <p class="text-sm text-center gap-2 m-1">Explora el mundo abierto de México con una acción de conducción ilimitada en los mejores autos del mundo.</p>
+        <p class="font-bold text-md">$69.99 USD</p>
+        <button class="text-blue-500">COMPRAR</button>
+      </div>
+    </div>
+
+
+  </section>
+
+  <!--FOOTER-->
+  <footer class="bg-neutral-primary-soft rounded-base shadow-xs border border-default m-4">
+    <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+      <div class="sm:flex sm:items-center sm:justify-between">
+        <a href="https://flowbite.com/" class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
+          <img src="/public/images/Valve_icon.png" class="h-7" alt="Valve Logo" />
+        </a>
+        <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-body sm:mb-0">
+          <li>
+            <a href="https://store.steampowered.com/privacy_agreement/" class="hover:underline me-4 md:me-6" target="_blank">Política de Privacidad</a>
+          </li>
+          <li>
+            <a href="https://store.steampowered.com/legal/" class="hover:underline me-4 md:me-6" target="_blank">Información legal</a>
+          </li>
+          <li>
+            <a href="https://help.steampowered.com/es-419/faqs/view/10BB-D27A-6378-4436?snr=1_44_44_" class="hover:underline me-4 md:me-6" target="_blank">Accesibilidad </a>
+          </li>
+          <li>
+            <a href="https://help.steampowered.com/es-419/?snr=1_44_44_" class="hover:underline" target="_blank">Contactos</a>
+          </li>
+        </ul>
+      </div>
+      <hr class="my-6 border-default sm:mx-auto lg:my-8" />
+      <span class="block text-sm text-body sm:text-center">© 2023 <a href="https://flowbite.com/"
+          class="hover:underline">© Valve Corporation.</a> Todos los derechos reservados. Todas las marcas registradas
+        pertenecen a sus respectivos dueños en EE. UU. y otros países</span>
+    </div>
+  </footer>
+
+
+
+
+  <!--Conexion-->
+  <script type="module" src="/src/js/main.js"></script>
+</body>
+
+</html>
