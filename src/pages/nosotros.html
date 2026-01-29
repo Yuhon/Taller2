@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Nosotros | Steam</title>
+  <link rel="icon" type="image/svg+xml" href="/public/images/steam_icon.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Tailwind -->
@@ -26,15 +27,104 @@
 <body class="bg-gray-900 text-white min-h-screen flex flex-col">
 
 <!--NAV-->
-<nav class="bg-gray-800 p-4 shadow-md sticky top-0 z-50">
-  <ul class="flex justify-center gap-8 font-semibold text-gray-300 uppercase tracking-widest text-sm">
-    <li><a href="../../index.html" class="hover:text-blue-400 transition">Inicio</a></li>
-    <li><a href="nosotros.html" class="text-blue-400">Nosotros</a></li>
-    <li><a href="categorias.html" class="hover:text-blue-400 transition">Categorías</a></li>
-    <li><a href="contacto.html" class="hover:text-blue-400 transition">Contáctanos</a></li>
-    <li><a href="carrito.html" class="hover:text-blue-400 transition">Compras</a></li>
-  </ul>
-</nav>
+  <nav class="bg-white border-gray-200 dark:bg-gray-900">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+      <a href="https://v3.flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
+        <img src="https://store.fastly.steamstatic.com/public/shared/images/header/logo_steam.svg?t=962016" class="h-8"
+          alt="Flowbite Logo" />
+      </a>
+      <div class="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+        <button type="button"
+          class="flex text-sm bg-gray-800 rounded-full md:me-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
+          id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown"
+          data-dropdown-placement="bottom">
+          <span class="sr-only">Open user menu</span>
+          <img class="w-8 h-8 rounded-full" src="https://i.postimg.cc/52n8kBL8/Igris-icon.jpg" alt="user photo">
+        </button>
+        <!--Tienda-->
+        <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse items-center gap-4">
+          <a href="/src/pages/carrito.html"
+            class="relative bg-slate-800 p-2 rounded-full border border-slate-700 hover:border-cyan-500 transition group">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white group-hover:text-cyan-400" fill="none"
+              viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+            </svg>
+            <!--Muestra la cantidad de productos-->
+            <span id="carrito-techno"
+              class="absolute -top-1 -right-1 text-[10px] font-bold rounded-full h-4 w-4 flex items-center justify-center text-white">
+            </span>
+          </a>
+
+          <button data-collapse-toggle="navbar-default" type="button"
+            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-400 rounded-lg md:hidden hover:bg-slate-800 focus:outline-none">
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M1 1h15M1 7h15M1 13h15" />
+            </svg>
+          </button>
+        </div>
+        <!-- Dropdown menu -->
+        <div
+          class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow-sm dark:bg-gray-700 dark:divide-gray-600"
+          id="user-dropdown">
+          <div class="px-4 py-3">
+            <span class="block text-sm text-gray-900 dark:text-white">Noobmaster69</span>
+            <span class="block text-sm  text-gray-500 truncate dark:text-gray-400">noobmaster69o@gmail.com</span>
+          </div>
+          <ul class="py-2" aria-labelledby="user-menu-button">
+            <li>
+              <a href="#"
+                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Ajustes</a>
+            </li>
+            <li>
+              <a href="#"
+                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Cerrar
+                Sesión
+              </a>
+            </li>
+          </ul>
+        </div>
+        <button data-collapse-toggle="navbar-user" type="button"
+          class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          aria-controls="navbar-user" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M1 1h15M1 7h15M1 13h15" />
+          </svg>
+        </button>
+      </div>
+      <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-user">
+        <ul
+          class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+          <li>
+            <a href="index.html"
+              class="block py-2 px-3 text-white bg-blue-700 rounded-sm md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500"
+              aria-current="page">Inicio</a>
+          </li>
+          <li>
+            <a href="/src/pages/nosotros.html"
+              class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Nosotros</a>
+          </li>
+          <li>
+            <a href="/src/pages/categorias.html"
+              class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Catálogo</a>
+          </li>
+
+          <li>
+            <a href="/src/pages/contacto.html"
+              class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Contactanos</a>
+          </li>
+          <li>
+            <a href="/src/pages/carrito.html"
+              class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Compras</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
 <!--HERO-->
 <section class="relative py-32 text-center overflow-hidden">
@@ -91,7 +181,7 @@
   </div>
 
   <img 
-    src="https://i.postimg.cc/28zftnhK/istockphoto-1276936276-1024x1024.jpg"
+    src="https://i.postimg.cc/L4fPNGyt/3.jpg"
     class="rounded-xl shadow-xl"
   >
 </section>
@@ -158,7 +248,7 @@
   <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-12 px-6">
 
     <div class="bg-gray-900 p-10 rounded-xl text-center shadow-xl">
-      <img src="https://cdn-icons-png.flaticon.com/512/2922/2922510.png" class="mx-auto w-28 mb-4 opacity-80">
+      <img src="https://i.postimg.cc/1XfsYxS4/icon2.png" class="mx-auto w-64 mb-4 opacity-80">
       <h4 class="text-xl font-bold uppercase">CEO</h4>
       <p class="text-red-300 font-semibold uppercase text-sm">Director Ejecutivo | Carlos Gualsaqui </p>
       <p class="text-gray-400 text-sm mt-3">
@@ -167,7 +257,7 @@
     </div>
 
     <div class="bg-gray-900 p-10 rounded-xl text-center shadow-xl">
-      <img src="https://cdn-icons-png.flaticon.com/512/2922/2922506.png" class="mx-auto w-28 mb-4 opacity-80">
+      <img src="https://i.postimg.cc/6q3pJ2ry/Icono1.png" class="mx-auto w-64 mb-4 opacity-80">
       <h4 class="text-xl font-bold uppercase">Gerente</h4>
       <p class="text-red-300 font-semibold uppercase text-sm">Gestión del Proyecto | Jhan Vega </p>
       <p class="text-gray-400 text-sm mt-3">
